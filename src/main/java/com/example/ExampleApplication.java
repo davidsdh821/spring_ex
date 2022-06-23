@@ -15,7 +15,6 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 @MapperScan(basePackages = "com.example.*")
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
 public class ExampleApplication {
 
 	public static void main(String[] args) {
