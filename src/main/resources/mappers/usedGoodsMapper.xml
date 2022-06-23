@@ -7,7 +7,7 @@
  		SELECT
  			*
  		FROM
- 			`uesd_goods`
+ 			`used_goods`
  			
  	
  	
