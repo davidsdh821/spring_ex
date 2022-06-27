@@ -6,7 +6,7 @@ public class Review {
 	
 	private int id;
 	private String storeName;
-	private String primenu;
+	private String menu;
 	private String userName;
 	private double point; 
 	private String review;
@@ -25,11 +25,11 @@ public class Review {
 	public void setStoreName(String storeName) {
 		this.storeName = storeName;
 	}
-	public String getPrimenu() {
-		return primenu;
+	public String getMenu() {
+		return menu;
 	}
-	public void setPrimenu(String primenu) {
-		this.primenu = primenu;
+	public void setMenu(String menu) {
+		this.menu = menu;
 	}
 	public String getUserName() {
 		return userName;

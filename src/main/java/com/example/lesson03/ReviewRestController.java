@@ -28,4 +28,47 @@ public class ReviewRestController {
 		System.out.println("###### id:" + id);
 		return reviewBO.getReview(id);
 	}
+	//http://localhost/lesson03/ex02
+	@RequestMapping("/lesson03/ex02")
+	public String ex02() { //한번에 전송
+		Review reivew = new Review();
+		reivew.setStoreName("배달삼겹");
+		reivew.setMenu("삼겹혼밥세트");
+		reivew.setUserName("신동현");
+		reivew.setPoint(4.5);
+		reivew.setReview("혼자 먹기 적당하네요.");
+		
+		int row = reviewBO.addReview(reivew); //insert 된 수를 리턴받는다
+		
+		return row > 0? "행 입력 성공했습니다." : "실패했습니다.";
+	
+	}
+	//이 방식은 순서가 똑같아야 한다.
+	//http://localhost/lesson03/ex02/2
+	@RequestMapping("/lesson03/ex02/2")
+	public String ex02_2() { //파라미터로 보내기
+		
+		int row = reviewBO.addReviewAsField("도미노피자", "콤비네이션R", "홍길동", 5.0, "맛있다"); //insert 된 수를 리턴받는다
+		
+		return row > 0? "행 입력 성공했습니다." : "실패했습니다.";
+	}
+	
+	//업데이트
+	//http://localhost/lesson03/ex03?id=20&review=도미노피자는 역시 맛있어
+	@RequestMapping("/lesson03/ex03")
+	public String ex03(
+			@RequestParam("id") int id,
+			@RequestParam("review") String review) {
+		 
+		int row  = reviewBO.updateReviewById(id, review);
+		return "변경완료: " + row;
+	}
+	
+	
+
+	
+	
+	
+	
+	
 }

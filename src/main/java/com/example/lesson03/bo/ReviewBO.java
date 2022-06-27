@@ -17,4 +17,18 @@ public class ReviewBO {
 		return reviewDAO.selectReview(id);
 	}
 	
+	public int addReview(Review review) {
+		return reviewDAO.insertReview(review);
+		
+	}
+	public int addReviewAsField( 
+			String storeName, String menu, String userName, double point, String review) {
+		return reviewDAO.insertReviewAsField("도미노피자", "콤비네이션R", "홍길동", 5.0, "맛있다");
+	}
+	
+	
+	public int updateReviewById(int id, String review) {
+		
+		return reviewDAO.updateReviewById(id, review);
+	}
 }
