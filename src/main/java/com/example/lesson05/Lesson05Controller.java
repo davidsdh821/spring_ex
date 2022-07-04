@@ -51,9 +51,13 @@ public class Lesson05Controller {
 		
 		return "lesson05/ex03";
 	}
-	
-	
-	
+	//http://localhost/lesson05/ex04
+	@RequestMapping("/lesson05/ex04")
+	public String ex04(Model model) {
+		
+		
+		return "lesson05/ex04";
+	}
 	
 	
 }
