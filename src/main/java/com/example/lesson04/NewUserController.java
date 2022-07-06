@@ -49,7 +49,7 @@ public class NewUserController {
 	
 	//http://localhost/lesson04/last_user_view 
 	//@RequestMapping도 가능하다
-	@GetMapping("/last_user_view ") //get으로만 들어올 수 있다
+	@GetMapping("/last_user_view") //get으로만 들어올 수 있다
 	public String lastUserView(Model model) {
 		//가장 최근에 가입한 사람 한명 정보 가져오기 -> select로 가져온다는 것
 		User NewUser = userBO.getLastUser();
