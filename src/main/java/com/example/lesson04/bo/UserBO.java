@@ -22,4 +22,11 @@ public class UserBO {
 		return userDAO.selectLastUser();
 	}
 	
+	public boolean existUserByName(String name) {
+		
+		
+		return userDAO.existUserByName(name);
+	}
+	
+	
 }
