@@ -27,17 +27,25 @@
 				<button type="button" class="btn btn-info" id="checkBtn">중복확인</button>
 			</div>
 			<small id="warningBox"></small>
+		
+			
 		</div>
 		
 		<button id="joinBtn" type="button" class="btn btn-success">가입하기</button>
-<!-- 		<div class="form-group">
-			<label for="password">비밀번호</label>
-				<input type="text" id="password" class="form-control col-8">
-		</div> -->
+
 	</div>
 
 	<script>
 		$(document).ready(function(){
+			
+				
+				
+				
+				
+			});
+			
+			
+			
 			$('#checkBtn').on('click', function() {
 				//warningBox 박스 하위 태그 초기화, 안하면 계속해서 늘어난다.
 				$('#warningBox').empty(); //자식 태그들을 모두 비움,초기화
